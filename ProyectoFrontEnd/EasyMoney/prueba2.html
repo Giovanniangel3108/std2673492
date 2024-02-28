@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuestas 1</title>
+    <style>
+        body {
+            background-color: #185705;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+        .encuesta {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: 1em;
+            padding: 1em;
+            text-align: left;
+            width: 20%;
+            vertical-align: top;
+        }
+        .encuesta h2 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .encuesta p {
+            margin-bottom: 0.5em;
+        }
+        .encuesta label {
+            display: block;
+            margin-bottom: 0.2em;
+        }
+        .encuesta input[type="radio"] {
+            margin-right: 0.5em;
+        }
+        .encuesta input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .encuesta input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .encuesta footer {
+            background-color: #4CAF50;
+            color: #fff;
+            border-top: 1px solid #3e8e41;
+            display: block;
+            padding: 0.5em;
+            text-align: center;
+            margin-top: 1em;
+        }
+        .encuesta footer p {
+            margin: 0;
+        }
+        .encuesta .pregunta {
+            background-color: #eee;
+            padding: 0.5em;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+        .encuesta .opcion {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido!!</h1>
+        <div class="encuesta">
+            <h2>Encuesta #020</h2>
+            <div class="pregunta">
+                <p>Consume Soda Light?</p>
+            </div>
+            <div class="opcion">
+                <label for="opcion--1">
+                    <input type="radio" id="opcion-020-1" name="opcion-020" value="1" required>
+                    Si 
+                </label>
+            </div>
+            <div class="opcion">
+                <label for="opcion-020-2">
+                    <input type="radio" id="opcion-020-2" name="opcion-020" value="2" required>
+                    No 
+                </label>
+            </div>
+            <div class="opcion">
+                <label for="opcion-020-2">
+                    <input type="radio" id="opcion-020-2" name="opcion-020" value="2" required>
+                   consumia pero ya no
+                </label>
+            </div>
+            <div class="opcion">
+                <label for="opcion-020-2">
+                    <input type="radio" id="opcion-020-2" name="opcion-020" value="2" required>
+                   no conozco ese producto
+                </label>
+            </div>
+            <div class="pregunta">
+                <p>GRACIAS POR SU OPINION</p>
+            </div>
