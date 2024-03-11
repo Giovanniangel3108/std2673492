@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinar el número secreto</title>
+</head>
+<body>
+    <h1>Juego de adivinar el número secreto</h1>
+    <p>Tienes 3 intentos para adivinar un número secreto entre 0 y 5.</p>
+    <form id="formulario">
+        <label for="numero">Introduce un número:</label>
+        <input type="number" id="numero" name="numero" required>
+        <br>
+        <button type="submit">Comprobar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        const numeroSecreto = Math.floor(Math.random() * 6); // Número secreto entre 0 y 5
+        let intentosRestantes = 3;
+
+        const formulario = document.getElementById("formulario");
+        formulario.addEventListener("submit", adivinarNumero);
+
+        function adivinarNumero(event) {
+            event.preventDefault();
+
+            const numero = document.getElementById("numero").value;
+
+            if (intentosRestantes > 0) {
+                if (numero == numeroSecreto) {
+                    // ¡El usuario ha ganado!
+                    document.getElementById("resultado").innerHTML = "¡Felicidades! Has adivinado el número secreto en " + (3 - intentosRestantes) + " intentos.";
+                    formulario.style.display = "none"; // Ocultar el formulario
+                } else {
+                    // El usuario no ha acertado el número
+                    intentosRestantes--;
+                    document.getElementById("resultado").innerHTML = "Fallaste. Te quedan " + intentosRestantes + " intentos.";
+                }
+            } else {
+                // El usuario ha perdido
+                document.getElementById("resultado").innerHTML = "Has perdido. El número secreto era " + numeroSecreto + ".";
+                formulario.style.display = "none"; // Ocultar el formulario
+            }
+        }
+    </script>
+</body>
+</html>

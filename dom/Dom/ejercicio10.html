@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover un cuadro</title>
+</head>
+<body>
+    <button onclick="moverCuadro()">Mover cuadro</button>
+    <br>
+    <div id="cuadro" style="width: 100px; height: 100px; background-color: red; position: absolute; left: 0px; top: 50px;"></div>
+
+    <script>
+        function moverCuadro() {
+            const cuadro = document.getElementById("cuadro");
+            const anchoPantalla = window.innerWidth;
+            const izquierdaActual = cuadro.offsetLeft;
+            const izquierdaFinal = anchoPantalla - cuadro.offsetWidth;
+
+            const intervalo = setInterval(function() {
+                const izquierdaActual = cuadro.offsetLeft;
+                if (izquierdaActual >= izquierdaFinal) {
+                    clearInterval(intervalo);
+                } else {
+                    cuadro.style.left = (izquierdaActual + 1) + "px";
+                }
+            }, 10);
+        }
+    </script>
+</body>
+</html>

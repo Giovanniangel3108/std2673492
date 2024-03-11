@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Dinámica</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabla Dinámica</h1>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="agregarFila()">Agregar Fila</button>
+
+    <script>
+        function agregarFila() {
+            var table = document.getElementById("myTable");
+            var newRow = table.insertRow(table.rows.length);
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            cell1.innerHTML = "Nuevo Nombre";
+            cell2.innerHTML = "Nueva Edad";
+        }
+    </script>
+</body>
+</html>

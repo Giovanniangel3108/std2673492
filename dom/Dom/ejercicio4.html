@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear bloque div</title>
+</head>
+<body>
+    <h1>Crear bloque div</h1>
+    <button onclick="crearDiv()">Crear</button>
+
+    <script>
+        function crearDiv() {
+            const div = document.createElement("div");
+            div.textContent = "Hola mundo";
+            div.style.color = "white";
+            div.style.backgroundColor = "red";
+            div.style.textAlign = "center";
+            document.body.appendChild(div);
+        }
+    </script>
+</body>
+</html>

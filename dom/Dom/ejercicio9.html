@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercalar colores en el texto</title>
+</head>
+<body>
+    <p id="texto">Este es un texto de ejemplo.</p>
+
+    <script>
+        const colores = ["#ff0000", "#00ff00"];
+        let indiceColor = 0;
+
+        setInterval(function() {
+            const texto = document.getElementById("texto");
+            texto.style.color = colores[indiceColor];
+            indiceColor = (indiceColor + 1) % colores.length;
+        }, 1000);
+    </script>
+</body>
+</html>
+
