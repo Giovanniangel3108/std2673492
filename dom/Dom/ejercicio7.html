@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de un Triángulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Área de un Triángulo</h1>
+    <form id="triangleForm">
+        <label for="base">Base:</label>
+        <input type="number" id="base" name="base" required>
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" name="altura" required>
+        <button type="button" onclick="calcularArea()">Calcular Área</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function calcularArea() {
+            const base = parseFloat(document.getElementById("base").value);
+            const altura = parseFloat(document.getElementById("altura").value);
+            const area = (base * altura) / 2;
+            document.getElementById("result").innerHTML = `El área del triángulo es: ${area.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
